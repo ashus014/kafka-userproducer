@@ -14,6 +14,7 @@ public class UserProducerService {
 
 //    public void sendUserData(String name, Integer age) {
     public void sendUserData(User user) {
+
         kafkaTemplate.send("user-topic", user.getName(), user);
     }
 }
